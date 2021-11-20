@@ -1,5 +1,5 @@
-import tkinter
 from tkinter import *
+from PIL import ImageTk
 from tkinter import messagebox
 from configparser import ConfigParser
 import requests
@@ -27,8 +27,16 @@ def search():
     weather = get_weather(zipcode)
     if weather:
         location_label["text"] = f"{weather[0]}"
-        temp_label["text"] = f"{weather[3]}°F"
+
+        image = ImageTk.PhotoImage(file="01d.png")
+        icon = Label(app)
+        icon.place(x=0, y=0)
+        icon.config(image=image)
+
         weather_label["text"] = weather[2]
+        temp_label["text"] = f"{weather[3]}°F"
+        temp_min_label["text"] = f"{weather[4]}°F"
+        temp_max_label["text"] = f"{weather[5]}°F"
     else:
         messagebox.showerror("Error", f"Cannot Find Zipcode {zipcode}")
 
@@ -50,17 +58,24 @@ zipcode_entry.pack()
 search_button = Button(app, text="Search Weather", width=12, command=search)
 search_button.pack()
 
-location_label = Label(app, text="Location", font=("bold", 20))
+location_label = Label(app, text="Please enter a Zipcode", font=("bold", 20))
 location_label.pack()
 
-image = Label(app, image='')
-image.pack()
-
-temp_label = Label(app, text="Temperature")
+temp_label = Label(app, text="")
 temp_label.pack()
 
-weather_label = Label(app, text="Current Forecast")
+temp_min_label = Label(app, text="")
+temp_min_label.pack()
+
+temp_max_label = Label(app, text="")
+temp_max_label.pack()
+
+weather_label = Label(app, text="")
 weather_label.pack()
+
+button_quit = Button(app, text="Quit", width=8, command=app.destroy)
+button_quit.pack()
+
 
 
 app.mainloop()
