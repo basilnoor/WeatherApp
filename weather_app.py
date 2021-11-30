@@ -11,10 +11,10 @@ def get_weather(zipcode):
 
     if weather_data:
         location = weather_data.json()['name']
-        weather = weather_data.json()['weather'][0]['main']
-        temp = round(weather_data.json()['main']['temp'])
-        temp_min = round(weather_data.json()['main']['temp_min'])
-        temp_max = round(weather_data.json()['main']['temp_max'])
+        weather = f"Forecast: {weather_data.json()['weather'][0]['main']}"
+        temp = f"Temp: {round(weather_data.json()['main']['temp'])}"
+        temp_min = f"Min: {round(weather_data.json()['main']['temp_min'])}"
+        temp_max = f"Max: {round(weather_data.json()['main']['temp_max'])}"
         icon = weather_data.json()['weather'][0]['icon']
 
         final = (location, icon, weather, temp, temp_min, temp_max)
