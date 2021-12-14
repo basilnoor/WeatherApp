@@ -7,3 +7,4 @@ Project Goals:
 - Implemented a GUI, via Tkinter, that outputs the relevant weather information for a given zip code.
 
 Tkinter UI:
+https://github.com/basilnoor/WeatherApp/issues/1#issue-1080385310
