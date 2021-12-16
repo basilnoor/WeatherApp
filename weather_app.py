@@ -1,3 +1,5 @@
+# Author: Basil Noor
+
 from tkinter import *
 from tkinter import messagebox
 from configparser import ConfigParser
@@ -16,7 +18,6 @@ def get_weather(zipcode):
         temp_min = f"Min: {round(weather_data.json()['main']['temp_min'])}"
         temp_max = f"Max: {round(weather_data.json()['main']['temp_max'])}"
         icon = weather_data.json()['weather'][0]['icon']
-
         final = (location, icon, weather, temp, temp_min, temp_max)
         return final
     else:
