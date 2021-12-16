@@ -2,7 +2,6 @@
 
 from tkinter import *
 from tkinter import messagebox
-from configparser import ConfigParser
 import requests
 
 
@@ -41,10 +40,7 @@ def search():
 
 
 # API key allowing us access to weather information and general configuration
-config_file = 'config.ini'
-config = ConfigParser()
-config.read(config_file)
-api_key = "5e21987cfd42ffaa803de02a742e990a"
+api_key = "insert_api_key"
 
 # Initializing Tkinter
 app = Tk()
