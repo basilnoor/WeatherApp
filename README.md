@@ -6,6 +6,10 @@
 - Extracted weather information from the OpenWeatherMap API.
 - Implemented a GUI, via Tkinter, that outputs the relevant weather information for a given zip code.
 
+### Future Goals:
+
+- No set goals
+
 ### Tkinter UI:
 
 ![weather app_main](https://user-images.githubusercontent.com/51865580/146094181-a816727b-c6a7-4467-a725-7ca97a66b58e.png)
