@@ -2,7 +2,7 @@
 
 ### Languages/Frameworks/Tools used:
 
-- Python, Pycharm
+- Python, Pycharm, TKinter
 
 ### Project Goals:
 
