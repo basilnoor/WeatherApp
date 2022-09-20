@@ -1,5 +1,9 @@
 # WeatherApp
 
+### Languages/Frameworks/Tools used:
+
+- Python, Pycharm
+
 ### Project Goals:
 
 - Developed a weather application using a public API in Python.
